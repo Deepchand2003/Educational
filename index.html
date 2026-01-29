@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Excellence Academy - Empowering Future Leaders Through Quality Education">
+  <title>Excellence Academy | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Salesforce MCP Beacon (add your org-specific script) -->
+  <!-- <script src="https://YOUR_ORG.evergage.com/beacon/YOUR_ACCOUNT/YOUR_DATASET/scripts/evergage.min.js"></script> -->
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="index.html" class="logo" data-evg-item-type="navigation" data-evg-item-id="logo">
+        <span class="logo-icon">🎓</span>
+        <span class="logo-text">Excellence Academy</span>
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      
+      <nav class="nav" id="nav" data-evg-zone="main-navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-evg-item-type="navigation" data-evg-item-id="home">Home</a></li>
+          <li><a href="#programs" class="nav-link" data-evg-item-type="navigation" data-evg-item-id="programs">Programs</a></li>
+          <li><a href="#about" class="nav-link" data-evg-item-type="navigation" data-evg-item-id="about">About Us</a></li>
+          <li><a href="#faculty" class="nav-link" data-evg-item-type="navigation" data-evg-item-id="faculty">Faculty</a></li>
+          <li><a href="#news" class="nav-link" data-evg-item-type="navigation" data-evg-item-id="news">News</a></li>
+          <li><a href="#contact" class="nav-link" data-evg-item-type="navigation" data-evg-item-id="contact">Contact</a></li>
+        </ul>
+        <a href="#apply" class="btn btn-primary nav-cta" data-evg-item-type="cta" data-evg-item-id="apply-now">Apply Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home" data-evg-zone="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge">🌟 Ranked Top 10 in the Region</span>
+        <h1 class="hero-title">Shape Your Future With <span class="text-gradient">Excellence</span></h1>
+        <p class="hero-description">Join a community of innovators, thinkers, and leaders. Our world-class education prepares you for tomorrow's challenges.</p>
+        <div class="hero-actions">
+          <a href="#programs" class="btn btn-primary btn-lg" data-evg-item-type="cta" data-evg-item-id="explore-programs">Explore Programs</a>
+          <a href="#about" class="btn btn-secondary btn-lg" data-evg-item-type="cta" data-evg-item-id="virtual-tour">Virtual Tour</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-count="15000">0</span>
+            <span class="stat-label">Students</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="200">0</span>
+            <span class="stat-label">Programs</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="95">0</span>
+            <span class="stat-label">% Placement</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=500&fit=crop" alt="Students on campus" loading="eager">
+          <div class="floating-card card-1">
+            <span class="card-icon">📚</span>
+            <span class="card-text">50+ Courses</span>
+          </div>
+          <div class="floating-card card-2">
+            <span class="card-icon">🏆</span>
+            <span class="card-text">Award Winning</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,60 C360,120 720,0 1080,60 C1260,90 1380,90 1440,60 L1440,120 L0,120 Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Programs Section -->
+  <section class="programs section" id="programs" data-evg-zone="programs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Programs</span>
+        <h2 class="section-title">Discover Your Path</h2>
+        <p class="section-description">Choose from our diverse range of academic programs designed to unlock your potential</p>
+      </div>
+      
+      <div class="program-filters" data-evg-zone="program-filters">
+        <button class="filter-btn active" data-filter="all">All Programs</button>
+        <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
+        <button class="filter-btn" data-filter="graduate">Graduate</button>
+        <button class="filter-btn" data-filter="certificate">Certificates</button>
+      </div>
+      
+      <div class="programs-grid">
+        <article class="program-card" data-category="undergraduate" data-evg-item-type="program" data-evg-item-id="business">
+          <div class="program-icon">💼</div>
+          <h3 class="program-title">Business Administration</h3>
+          <p class="program-description">Develop leadership skills and business acumen for the modern corporate world.</p>
+          <div class="program-meta">
+            <span class="program-duration">4 Years</span>
+            <span class="program-type">Bachelor's</span>
+          </div>
+          <a href="#" class="program-link">Learn More →</a>
+        </article>
+        
+        <article class="program-card" data-category="undergraduate" data-evg-item-type="program" data-evg-item-id="computer-science">
+          <div class="program-icon">💻</div>
+          <h3 class="program-title">Computer Science</h3>
+          <p class="program-description">Master cutting-edge technologies and prepare for the digital future.</p>
+          <div class="program-meta">
+            <span class="program-duration">4 Years</span>
+            <span class="program-type">Bachelor's</span>
+          </div>
+          <a href="#" class="program-link">Learn More →</a>
+        </article>
+        
+        <article class="program-card" data-category="graduate" data-evg-item-type="program" data-evg-item-id="mba">
+          <div class="program-icon">📊</div>
+          <h3 class="program-title">MBA Program</h3>
+          <p class="program-description">Accelerate your career with our internationally recognized MBA program.</p>
+          <div class="program-meta">
+            <span class="program-duration">2 Years</span>
+            <span class="program-type">Master's</span>
+          </div>
+          <a href="#" class="program-link">Learn More →</a>
+        </article>
+        
+        <article class="program-card" data-category="undergraduate" data-evg-item-type="program" data-evg-item-id="medicine">
+          <div class="program-icon">🏥</div>
+          <h3 class="program-title">Medicine & Health</h3>
+          <p class="program-description">Join the healthcare leaders of tomorrow with our comprehensive medical program.</p>
+          <div class="program-meta">
+            <span class="program-duration">6 Years</span>
+            <span class="program-type">Doctorate</span>
+          </div>
+          <a href="#" class="program-link">Learn More →</a>
+        </article>
+        
+        <article class="program-card" data-category="certificate" data-evg-item-type="program" data-evg-item-id="data-science">
+          <div class="program-icon">📈</div>
+          <h3 class="program-title">Data Science</h3>
+          <p class="program-description">Learn to extract insights from data and drive informed decisions.</p>
+          <div class="program-meta">
+            <span class="program-duration">6 Months</span>
+            <span class="program-type">Certificate</span>
+          </div>
+          <a href="#" class="program-link">Learn More →</a>
+        </article>
+        
+        <article class="program-card" data-category="graduate" data-evg-item-type="program" data-evg-item-id="engineering">
+          <div class="program-icon">⚙️</div>
+          <h3 class="program-title">Engineering</h3>
+          <p class="program-description">Innovate and build solutions that shape the future of technology.</p>
+          <div class="program-meta">
+            <span class="program-duration">2 Years</span>
+            <span class="program-type">Master's</span>
+          </div>
+          <a href="#" class="program-link">Learn More →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about section" id="about" data-evg-zone="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images">
+          <div class="about-image-main">
+            <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=500&h=600&fit=crop" alt="Campus building" loading="lazy">
+          </div>
+          <div class="about-image-secondary">
+            <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=300&h=200&fit=crop" alt="Students studying" loading="lazy">
+          </div>
+          <div class="experience-badge">
+            <span class="exp-number">50+</span>
+            <span class="exp-text">Years of Excellence</span>
+          </div>
+        </div>
+        
+        <div class="about-content">
+          <span class="section-badge">About Us</span>
+          <h2 class="section-title">A Legacy of Academic Excellence</h2>
+          <p class="about-text">Founded in 1974, Excellence Academy has been at the forefront of educational innovation. We believe in nurturing not just minds, but character, creativity, and compassion.</p>
+          <p class="about-text">Our state-of-the-art facilities, world-renowned faculty, and vibrant campus life create an environment where students thrive and dreams become reality.</p>
+          
+          <div class="about-features">
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span class="feature-text">Internationally Accredited Programs</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span class="feature-text">Research-Driven Curriculum</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span class="feature-text">Industry Partnerships & Internships</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-icon">✓</span>
+              <span class="feature-text">Global Exchange Programs</span>
+            </div>
+          </div>
+          
+          <a href="#" class="btn btn-primary" data-evg-item-type="cta" data-evg-item-id="learn-more-about">Learn More About Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Faculty Section -->
+  <section class="faculty section section-alt" id="faculty" data-evg-zone="faculty">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Our Faculty</span>
+        <h2 class="section-title">Learn From The Best</h2>
+        <p class="section-description">Our distinguished faculty brings decades of experience and passion for teaching</p>
+      </div>
+      
+      <div class="faculty-grid">
+        <article class="faculty-card" data-evg-item-type="faculty" data-evg-item-id="dr-johnson">
+          <div class="faculty-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Dr. Michael Johnson" loading="lazy">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">Dr. Michael Johnson</h3>
+            <p class="faculty-role">Dean of Business School</p>
+            <p class="faculty-credentials">PhD from Harvard, 25+ years experience</p>
+          </div>
+        </article>
+        
+        <article class="faculty-card" data-evg-item-type="faculty" data-evg-item-id="dr-chen">
+          <div class="faculty-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop&crop=face" alt="Dr. Sarah Chen" loading="lazy">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">Dr. Sarah Chen</h3>
+            <p class="faculty-role">Head of Computer Science</p>
+            <p class="faculty-credentials">Former Google Engineer, MIT Alumni</p>
+          </div>
+        </article>
+        
+        <article class="faculty-card" data-evg-item-type="faculty" data-evg-item-id="prof-williams">
+          <div class="faculty-image">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Prof. James Williams" loading="lazy">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">Prof. James Williams</h3>
+            <p class="faculty-role">Director of Research</p>
+            <p class="faculty-credentials">Nobel Prize Nominee, Oxford Fellow</p>
+          </div>
+        </article>
+        
+        <article class="faculty-card" data-evg-item-type="faculty" data-evg-item-id="dr-patel">
+          <div class="faculty-image">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&h=300&fit=crop&crop=face" alt="Dr. Priya Patel" loading="lazy">
+          </div>
+          <div class="faculty-info">
+            <h3 class="faculty-name">Dr. Priya Patel</h3>
+            <p class="faculty-role">Head of Medicine</p>
+            <p class="faculty-credentials">Johns Hopkins Alumni, 20+ Publications</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section" data-evg-zone="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Student Stories</span>
+        <h2 class="section-title">What Our Students Say</h2>
+      </div>
+      
+      <div class="testimonials-slider" id="testimonialSlider">
+        <div class="testimonial-card active">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"Excellence Academy transformed my life. The professors don't just teach—they inspire. I landed my dream job at Google before even graduating!"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=80&h=80&fit=crop&crop=face" alt="Emily Rodriguez" class="author-image">
+            <div class="author-info">
+              <span class="author-name">Emily Rodriguez</span>
+              <span class="author-role">Computer Science, Class of 2023</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"The MBA program here is world-class. The case study approach and networking opportunities opened doors I never knew existed."</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&h=80&fit=crop&crop=face" alt="David Kim" class="author-image">
+            <div class="author-info">
+              <span class="author-name">David Kim</span>
+              <span class="author-role">MBA, Class of 2022</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-content">
+            <p class="testimonial-text">"From day one, I felt supported. The campus community is incredible, and the resources available are unmatched. Best decision of my life!"</p>
+          </div>
+          <div class="testimonial-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Aisha Mohammed" class="author-image">
+            <div class="author-info">
+              <span class="author-name">Aisha Mohammed</span>
+              <span class="author-role">Medicine, Class of 2024</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonial-dots" id="testimonialDots">
+        <button class="dot active" data-index="0"></button>
+        <button class="dot" data-index="1"></button>
+        <button class="dot" data-index="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Section -->
+  <section class="news section section-alt" id="news" data-evg-zone="news">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Latest News</span>
+        <h2 class="section-title">Campus Updates</h2>
+      </div>
+      
+      <div class="news-grid">
+        <article class="news-card featured" data-evg-item-type="article" data-evg-item-id="news-1">
+          <div class="news-image">
+            <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=600&h=400&fit=crop" alt="Graduation ceremony" loading="lazy">
+            <span class="news-category">Events</span>
+          </div>
+          <div class="news-content">
+            <span class="news-date">January 15, 2025</span>
+            <h3 class="news-title">2025 Commencement Ceremony Celebrates Record Graduates</h3>
+            <p class="news-excerpt">Over 3,000 students received their degrees in our largest graduation ceremony to date, with keynote speaker...</p>
+            <a href="#" class="news-link">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="news-card" data-evg-item-type="article" data-evg-item-id="news-2">
+          <div class="news-image">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=250&fit=crop" alt="Research lab" loading="lazy">
+            <span class="news-category">Research</span>
+          </div>
+          <div class="news-content">
+            <span class="news-date">January 10, 2025</span>
+            <h3 class="news-title">New AI Research Lab Opens</h3>
+            <p class="news-excerpt">$50 million facility to advance machine learning research...</p>
+            <a href="#" class="news-link">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="news-card" data-evg-item-type="article" data-evg-item-id="news-3">
+          <div class="news-image">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&h=250&fit=crop" alt="Students collaborating" loading="lazy">
+            <span class="news-category">Partnerships</span>
+          </div>
+          <div class="news-content">
+            <span class="news-date">January 5, 2025</span>
+            <h3 class="news-title">Global Exchange Partnership</h3>
+            <p class="news-excerpt">New agreements with 15 international universities expand opportunities...</p>
+            <a href="#" class="news-link">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section" data-evg-zone="cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Start Your Journey?</h2>
+        <p class="cta-description">Join thousands of students who have transformed their lives through education at Excellence Academy.</p>
+        <div class="cta-actions">
+          <a href="#apply" class="btn btn-light btn-lg" data-evg-item-type="cta" data-evg-item-id="apply-now-cta">Apply Now</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg" data-evg-item-type="cta" data-evg-item-id="schedule-visit">Schedule a Visit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact section" id="contact" data-evg-zone="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="section-badge">Get In Touch</span>
+          <h2 class="section-title">Contact Us</h2>
+          <p class="contact-description">Have questions? We're here to help you every step of the way.</p>
+          
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>123 Academic Drive, Education City, EC 10001</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <p>admissions@excellenceacademy.edu</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕒</span>
+              <div>
+                <strong>Office Hours</strong>
+                <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <form class="contact-form" id="contactForm" data-evg-form="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="program" class="form-label">Interested Program</label>
+            <select id="program" name="program" class="form-select">
+              <option value="">Select a program</option>
+              <option value="business">Business Administration</option>
+              <option value="computer-science">Computer Science</option>
+              <option value="mba">MBA Program</option>
+              <option value="medicine">Medicine & Health</option>
+              <option value="engineering">Engineering</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell us about your interests..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" data-evg-item-type="form-submit" data-evg-item-id="contact-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" data-evg-zone="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <span class="logo-icon">🎓</span>
+            <span class="logo-text">Excellence Academy</span>
+          </a>
+          <p class="footer-description">Empowering future leaders through quality education since 1974.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#faculty">Faculty</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 class="footer-title">Resources</h4>
+          <ul>
+            <li><a href="#">Student Portal</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Career Services</a></li>
+            <li><a href="#">Research</a></li>
+            <li><a href="#">Alumni Network</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4 class="footer-title">Admissions</h4>
+          <ul>
+            <li><a href="#">Apply Now</a></li>
+            <li><a href="#">Requirements</a></li>
+            <li><a href="#">Scholarships</a></li>
+            <li><a href="#">Tuition & Fees</a></li>
+            <li><a href="#">Visit Campus</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Excellence Academy. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
