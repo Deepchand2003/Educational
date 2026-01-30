@@ -433,6 +433,7 @@ function identifyUser(userData) {
   console.log('User Identified:', userData);
 }
 
+
 // Export functions for global access
 window.trackEvent = trackEvent;
 window.identifyUser = identifyUser;
