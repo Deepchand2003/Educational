@@ -302,138 +302,138 @@ function initContactForm() {
  * Salesforce Marketing Cloud Personalization (Interaction Studio) Integration
  * This section provides hooks for MCP integration
  */
-function initSalesforceMCP() {
-  // Check if Evergage/MCP SDK is loaded
-  if (typeof Evergage !== 'undefined') {
-    console.log('Salesforce MCP SDK detected');
+// function initSalesforceMCP() {
+//   // Check if Evergage/MCP SDK is loaded
+//   if (typeof Evergage !== 'undefined') {
+//     console.log('Salesforce MCP SDK detected');
     
-    // Initialize with your configuration
-    Evergage.init({
-      cookieDomain: window.location.hostname
-    }).then(() => {
-      console.log('Salesforce MCP initialized');
+//     // Initialize with your configuration
+//     Evergage.init({
+//       cookieDomain: window.location.hostname
+//     }).then(() => {
+//       console.log('Salesforce MCP initialized');
       
-      // Track page view
-      trackPageView();
+//       // Track page view
+//       trackPageView();
       
-      // Set up catalog tracking
-      initCatalogTracking();
-    });
-  } else {
-    console.log('Salesforce MCP SDK not loaded - tracking disabled');
-  }
-}
+//       // Set up catalog tracking
+//       initCatalogTracking();
+//     });
+//   } else {
+//     console.log('Salesforce MCP SDK not loaded - tracking disabled');
+//   }
+// }
 
-/**
- * Track Page Views for MCP
- */
-function trackPageView() {
-  const pageData = {
-    page_type: getPageType(),
-    page_title: document.title,
-    url: window.location.href
-  };
+// /**
+//  * Track Page Views for MCP
+//  */
+// function trackPageView() {
+//   const pageData = {
+//     page_type: getPageType(),
+//     page_title: document.title,
+//     url: window.location.href
+//   };
 
-  if (typeof Evergage !== 'undefined') {
-    Evergage.sendEvent({
-      action: 'Page View',
-      ...pageData
-    });
-  }
+//   if (typeof Evergage !== 'undefined') {
+//     Evergage.sendEvent({
+//       action: 'Page View',
+//       ...pageData
+//     });
+//   }
 
-  console.log('Page View Tracked:', pageData);
-}
+//   console.log('Page View Tracked:', pageData);
+// }
 
-/**
- * Get Current Page Type
- */
-function getPageType() {
-  const path = window.location.pathname;
-  if (path === '/' || path === '/index.html') return 'homepage';
-  if (path.includes('program')) return 'program_detail';
-  if (path.includes('about')) return 'about';
-  if (path.includes('contact')) return 'contact';
-  return 'other';
-}
+// /**
+//  * Get Current Page Type
+//  */
+// function getPageType() {
+//   const path = window.location.pathname;
+//   if (path === '/' || path === '/index.html') return 'homepage';
+//   if (path.includes('program')) return 'program_detail';
+//   if (path.includes('about')) return 'about';
+//   if (path.includes('contact')) return 'contact';
+//   return 'other';
+// }
 
-/**
- * Initialize Catalog Tracking for Programs
- */
-function initCatalogTracking() {
-  const programCards = document.querySelectorAll('[data-evg-item-type="program"]');
+// /**
+//  * Initialize Catalog Tracking for Programs
+//  */
+// function initCatalogTracking() {
+//   const programCards = document.querySelectorAll('[data-evg-item-type="program"]');
 
-  programCards.forEach(card => {
-    // Track program views
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const programId = card.dataset.evgItemId;
-          trackEvent('view_item', {
-            item_type: 'program',
-            item_id: programId
-          });
-          observer.unobserve(card);
-        }
-      });
-    }, { threshold: 0.5 });
+//   programCards.forEach(card => {
+//     // Track program views
+//     const observer = new IntersectionObserver((entries) => {
+//       entries.forEach(entry => {
+//         if (entry.isIntersecting) {
+//           const programId = card.dataset.evgItemId;
+//           trackEvent('view_item', {
+//             item_type: 'program',
+//             item_id: programId
+//           });
+//           observer.unobserve(card);
+//         }
+//       });
+//     }, { threshold: 0.5 });
 
-    observer.observe(card);
+//     observer.observe(card);
 
-    // Track program clicks
-    card.addEventListener('click', function(e) {
-      if (e.target.classList.contains('program-link')) {
-        trackEvent('click_item', {
-          item_type: 'program',
-          item_id: card.dataset.evgItemId
-        });
-      }
-    });
-  });
-}
+//     // Track program clicks
+//     card.addEventListener('click', function(e) {
+//       if (e.target.classList.contains('program-link')) {
+//         trackEvent('click_item', {
+//           item_type: 'program',
+//           item_id: card.dataset.evgItemId
+//         });
+//       }
+//     });
+//   });
+// }
 
-/**
- * Generic Event Tracking Function
- * Use this to track any custom events for Salesforce MCP
- */
-function trackEvent(eventName, eventData = {}) {
-  const event = {
-    action: eventName,
-    timestamp: new Date().toISOString(),
-    ...eventData
-  };
+// /**
+//  * Generic Event Tracking Function
+//  * Use this to track any custom events for Salesforce MCP
+//  */
+// function trackEvent(eventName, eventData = {}) {
+//   const event = {
+//     action: eventName,
+//     timestamp: new Date().toISOString(),
+//     ...eventData
+//   };
 
-  // Send to Salesforce MCP if available
-  if (typeof Evergage !== 'undefined') {
-    Evergage.sendEvent(event);
-  }
+//   // Send to Salesforce MCP if available
+//   if (typeof Evergage !== 'undefined') {
+//     Evergage.sendEvent(event);
+//   }
 
-  // Log for debugging (remove in production)
-  console.log('Event Tracked:', event);
-}
+//   // Log for debugging (remove in production)
+//   console.log('Event Tracked:', event);
+// }
 
-/**
- * User Identification for MCP
- * Call this when you have user information (e.g., after form submission)
- */
-function identifyUser(userData) {
-  if (typeof Evergage !== 'undefined') {
-    Evergage.sendEvent({
-      action: 'Identify',
-      user: {
-        id: userData.email,
-        attributes: {
-          email: userData.email,
-          name: userData.name,
-          programInterest: userData.program
-        }
-      }
-    });
-  }
+// /**
+//  * User Identification for MCP
+//  * Call this when you have user information (e.g., after form submission)
+//  */
+// function identifyUser(userData) {
+//   if (typeof Evergage !== 'undefined') {
+//     Evergage.sendEvent({
+//       action: 'Identify',
+//       user: {
+//         id: userData.email,
+//         attributes: {
+//           email: userData.email,
+//           name: userData.name,
+//           programInterest: userData.program
+//         }
+//       }
+//     });
+//   }
 
-  console.log('User Identified:', userData);
-}
+//   console.log('User Identified:', userData);
+// }
 
 
-// Export functions for global access
-window.trackEvent = trackEvent;
-window.identifyUser = identifyUser;
+// // Export functions for global access
+// window.trackEvent = trackEvent;
+// window.identifyUser = identifyUser;
