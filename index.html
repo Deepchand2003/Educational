@@ -537,6 +537,25 @@
 
   <!-- Back to Top Button -->
   <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DgK00000JBBWg',
+				'Agentforce_Demo',
+				'https://orgfarm-2aa42ac4cd-dev-ed.develop.my.site.com/ESWAgentforceDemo1769334221310',
+				{
+					scrt2URL: 'https://orgfarm-2aa42ac4cd-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-2aa42ac4cd-dev-ed.develop.my.site.com/ESWAgentforceDemo1769334221310/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
   <script src="main.js"></script>
 </body>
