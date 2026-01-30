@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
   initCounterAnimation();
   initBackToTop();
   initContactForm();
-  initSalesforceMCP();
+  // initSalesforceMCP();
 });
 
 /**
